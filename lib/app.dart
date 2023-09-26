@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nintendo_db/layout_desktop.dart';
 import 'layout_mobile_screen_0.dart';
 
 // Crear el widget principal 'App' de tipus 'stateful'
@@ -13,7 +14,12 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
 // Definir el contingut del widget 'App'
   Widget _setLayout(BuildContext context) {
-    return const LayoutMobilScreen0();
+    double width = MediaQuery.of(context).size.width;
+    if (width >= 600) {
+      return const LayoutDesktop();
+    } else {
+      return const LayoutMobilScreen0();
+    }
   }
 
   @override
