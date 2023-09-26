@@ -57,7 +57,7 @@ class LayoutJocs extends StatelessWidget {
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(30),
                     child: Text("${itemData['descripcio']}")),
               ],
             )),
